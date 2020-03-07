@@ -30,3 +30,19 @@ wp_enqueue_script(
   '1.0.0',
   true
 );
+
+/*
+ * Hook call in PHP class
+ */
+do_action('wp_enqueue_scripts', array( $this, 'scripts' ));
+public function scripts() {
+  
+  wp_enqueue_script( 
+    'handle-js', 
+    CONSTANT_PLUGIN_URL . 'assets/js/file.js', 
+    array( 'jquery' ), 
+    '1.0.0', 
+    true
+  );
+  
+}
