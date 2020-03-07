@@ -34,7 +34,7 @@ wp_enqueue_script(
 /*
  * Hook call in PHP class
  */
-do_action('wp_enqueue_scripts', array( $this, 'scripts' ));
+add_action('wp_enqueue_scripts', array( $this, 'scripts' ));
 public function scripts() {
   
   wp_enqueue_script( 
