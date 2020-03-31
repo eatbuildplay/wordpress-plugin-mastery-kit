@@ -9,7 +9,7 @@ class Template {
   public $name;
 
   public function __construct() {
-    $this->templatePath = 'templates/';
+    $this->path = 'templates/';
   }
 
   public function get() {
