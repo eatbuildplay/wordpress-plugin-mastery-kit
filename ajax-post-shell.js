@@ -5,11 +5,10 @@
     index: connectionIndex
   }
   $.post( ajaxurl, data, function( response ) {
-    if ( response.status == 'success' ) {
-
-    } else {
-
-    }
+    
+     response = JSON.PARSE(response);
+     console.log( response )
+    
   });
 
 })( jQuery );
