@@ -5,11 +5,11 @@ namespace CommercialProperty;
 class Template {
 
   public $data = [];
-  public $templatePath;
-  public $templateName;
+  public $path;
+  public $name;
 
   public function __construct() {
-    $this->templatePath = 'templates/';
+    $this->path = 'templates/';
   }
 
   public function get() {
@@ -17,7 +17,7 @@ class Template {
       extract( $this->data );
     }
     ob_start();
-    require( WC_ONSITE_COURSES_PLUGIN_PATH . $this->templatePath . $this->templateName . '.php' );
+    require( WC_ONSITE_COURSES_PLUGIN_PATH . $this->path . $this->name . '.php' );
     $content = ob_get_contents();
     ob_end_clean();
     return $content;
